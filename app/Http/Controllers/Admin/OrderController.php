@@ -11,7 +11,8 @@ class OrderController extends Controller
     public function index()
     {
         // Fetch all orders from the database
-        $orders = Order::all(); // You can apply filters here if needed
+        $orders = Order::with('user')->get();
+         
 
         // Return the view with the orders data
         return view('admin.orders.index', compact('orders'));

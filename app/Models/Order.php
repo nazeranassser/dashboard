@@ -18,6 +18,7 @@ class Order extends Model
         'customer_phone',
         'placed_on',
         'order_status',
+        'user_id',
         'total',
     ];
 
